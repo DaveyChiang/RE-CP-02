@@ -24,17 +24,17 @@ mod_default_config(){
 
     # C1
     echo
-    echo '[MOD] 修改后台地址为 192.168.199.1'
-    sed -i 's/192.168.1.1/192.168.199.1/w /dev/stdout' package/base-files/files/bin/config_generate
+    echo '[MOD] 修改后台地址为 10.0.10.1'
+    sed -i 's/192.168.1.1/10.0.10.1/w /dev/stdout' package/base-files/files/bin/config_generate
 
     echo '[MOD] 修改时区为东八区'
     sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/w /dev/stdout" package/base-files/files/bin/config_generate
 
-    echo '[MOD] 修改主机名为 JDC_Mark3'
-    sed -i 's/OpenWrt/JDC_Mark3/w /dev/stdout' package/base-files/files/bin/config_generate
+    echo '[MOD] 修改主机名为 AX1800'
+    sed -i 's/OpenWrt/AX1800/w /dev/stdout' package/base-files/files/bin/config_generate
 
     # C2
-    echo '[MOD] 修改默认主题为老竭力的 argon'
+    echo '[MOD] 修改默认主题为argon'
     # sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci*/Makefile
     sed -i 's/bootstrap/argon/w /dev/stdout' feeds/luci/modules/luci-base/root/etc/config/luci
 
